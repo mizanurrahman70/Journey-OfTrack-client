@@ -16,6 +16,7 @@ import Regester from './Components/Regester/Regester.jsx';
 import Login from './Login/Login.jsx';
 import AuthProvider from './Login/Auth Provider/AuthProvider.jsx';
 import Root from './Components/Root/Root.jsx';
+import CardDtls from './Components/CardDtls/CardDtls.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +38,12 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
-      }
+      },
+      {
+        path:'/details/:id',
+        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
+        element:<CardDtls></CardDtls>
+      },
     ])
   },
 ]);
