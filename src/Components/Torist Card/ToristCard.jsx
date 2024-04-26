@@ -9,12 +9,12 @@ const ToristCard = () => {
        .then(res=>res.json())
        .then(data=>{
         setUser(data)
-        console.log(data)
+       
      
        })
        .catch(error=>console.log(error))
     },[])
-    console.log(user)
+
     return (
         <div className='grid lg:grid-cols-3 gap-5'>
             {

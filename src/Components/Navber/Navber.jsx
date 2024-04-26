@@ -4,6 +4,7 @@ import { AuthContext } from '../../Login/Auth Provider/AuthProvider';
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
+  
   const [theme,setTheme]=useState('light')
   const themeHandle=(e)=>{
     if(e.target.checked){
@@ -23,6 +24,7 @@ useEffect(()=>{
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
   };
+ 
     return (
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -34,7 +36,7 @@ useEffect(()=>{
             <NavLink to='/'> <li><a>Home</a></li></NavLink>
            <NavLink>  <li><a>All Tourists Spot</a></li></NavLink>
           <NavLink to='/addtorist'>  <li><a>Add Tourists Spot</a></li></NavLink>
-          <NavLink><li><a>My List</a></li></NavLink>
+          <NavLink to='/toristlist'><li><a>My List</a></li></NavLink>
  
     
             </ul>
@@ -46,7 +48,7 @@ useEffect(()=>{
            <NavLink to='/'> <li><a>Home</a></li></NavLink>
            <NavLink to='/allsports'>  <li><a>All Tourists Spot</a></li></NavLink>
           <NavLink to='/addtorist'>  <li><a>Add Tourists Spot</a></li></NavLink>
-          <NavLink><li><a>My List</a></li></NavLink>
+          <NavLink to='/toristlist'><li><a>My List</a></li></NavLink>
             <label className="swap swap-rotate">
   
   {/* this hidden checkbox controls the state */}
@@ -69,7 +71,7 @@ useEffect(()=>{
         <div className="flex  items-center ml-36">
           <div role="button" className="btn btn-ghost btn-circle">
             <div className="w-10 rounded-full flex tooltip" data-tip={user?.displayName || 'Unknown'}>
-            <img className='rounded-full' alt="User" src={user.photoURL || 'https://i.ibb.co/y50H2s0/error.png'} />
+            <img className='rounded-full' alt="User" src={user?.photoURL || 'https://i.ibb.co/y50H2s0/error.png'} />
             </div>
           </div>
           <div>

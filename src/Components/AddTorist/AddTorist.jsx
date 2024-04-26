@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Login/Auth Provider/AuthProvider';
 
 const AddTorist = () => {
+    const { user } = useContext(AuthContext);
+    
     const handleAddCoffee = event => {
+        
         event.preventDefault();
 
         const form = event.target;
@@ -18,8 +22,9 @@ const AddTorist = () => {
         
         
         const imgURL = form.imgURL.value;
+        const authEmail=user.email
 
-        const newTorist = {toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
+        const newTorist = {authEmail,toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
         console.log(newTorist)
         fetch('http://localhost:5000/torists_sides',{
             method:"POST",
