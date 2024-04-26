@@ -17,6 +17,8 @@ import Login from './Login/Login.jsx';
 import AuthProvider from './Login/Auth Provider/AuthProvider.jsx';
 import Root from './Components/Root/Root.jsx';
 import CardDtls from './Components/CardDtls/CardDtls.jsx';
+import AllTorist from './Components/All Tosrist List/AllTorist.jsx';
+import AverageData from './Components/Average Data/AverageData.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
         path:'/details/:id',
         loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
         element:<CardDtls></CardDtls>
+      },
+      {
+        path:'/allsports',
+       loader:()=>fetch('http://localhost:5000/torists_sides'),
+        element:<AllTorist></AllTorist>
+      },
+      {
+        path:'/average',
+       loader:()=>fetch('http://localhost:5000/torists_sides'),
+        element:<AverageData></AverageData>
       },
     ])
   },

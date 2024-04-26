@@ -44,7 +44,7 @@ useEffect(()=>{
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 items-center">
            <NavLink to='/'> <li><a>Home</a></li></NavLink>
-           <NavLink>  <li><a>All Tourists Spot</a></li></NavLink>
+           <NavLink to='/allsports'>  <li><a>All Tourists Spot</a></li></NavLink>
           <NavLink to='/addtorist'>  <li><a>Add Tourists Spot</a></li></NavLink>
           <NavLink><li><a>My List</a></li></NavLink>
             <label className="swap swap-rotate">
