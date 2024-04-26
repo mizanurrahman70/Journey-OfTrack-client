@@ -19,8 +19,20 @@ const AddTorist = () => {
         
         const imgURL = form.imgURL.value;
 
-        const newTorist = { toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
+        const newTorist = {toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
         console.log(newTorist)
+        fetch('http://localhost:5000/torists_sides',{
+            method:"POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(newTorist)
+        })
+        .then(res=>res.json)
+        .then(data=>{
+            console.log(data)
+            form.reset( )
+        })
 
        
 

@@ -1,16 +1,18 @@
 import React from 'react';
-import Navber from './Navber/Navber';
+
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer/Footer';
+
+import Navber from '../Navber/Navber';
+import Footer from '../Footer/Footer';
 
 const Root = () => {
     return (
         <div >
             <div className='container mx-auto mt-10'>
-            <Navber></Navber>
+             <Navber></Navber>
             <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+           <Footer></Footer>
         </div>
     );
 };

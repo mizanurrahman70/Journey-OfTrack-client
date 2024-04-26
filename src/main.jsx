@@ -8,17 +8,18 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import Root from './Components/Root.jsx';
+
 import Error from './Components/ErrorMassege/Error.jsx';
 import Home from './Components/Home/Home.jsx';
 import AddTorist from './Components/AddTorist/AddTorist.jsx';
 import Regester from './Components/Regester/Regester.jsx';
 import Login from './Login/Login.jsx';
 import AuthProvider from './Login/Auth Provider/AuthProvider.jsx';
+import Root from './Components/Root/Root.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element:<Root></Root> ,
     errorElement:<Error></Error>,
     children:([
       {
