@@ -20,6 +20,7 @@ import CardDtls from './Components/CardDtls/CardDtls.jsx';
 import AllTorist from './Components/All Tosrist List/AllTorist.jsx';
 import AverageData from './Components/Average Data/AverageData.jsx';
 import MyList from './Components/My List/MyList.jsx';
+import UpdateLIst from './Components/Update Torist  List/UpdateLIst.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
         path:'/toristlist',
     
         element:<MyList></MyList>
+      },
+      {
+        path:'/update/:id',
+        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
+        element:<UpdateLIst></UpdateLIst>
       },
     ])
   },
