@@ -33,7 +33,7 @@ const AddTorist = () => {
             },
             body:JSON.stringify(newTorist)
         })
-        .then(res=>res.json)
+        .then(res=>res.json())
         .then(data=>{
             console.log(data)
             form.reset( )

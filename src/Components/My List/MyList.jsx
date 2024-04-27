@@ -44,9 +44,11 @@ const MyList = () => {
                   
 				</tr>
 			</thead>
+			<tbody>
 			{
                 users.map((user)=><MyCard key={user._id} list={user}></MyCard>)
             }
+			</tbody>
 		</table>
 	</div>
 </div>

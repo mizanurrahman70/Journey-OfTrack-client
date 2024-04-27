@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateLIst = () => {
     const loaderData=useLoaderData()
@@ -23,17 +24,59 @@ const UpdateLIst = () => {
     const imgURL = form.imgURL.value;
    
     const newTorist = {toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
-    fetch(`http://localhost:5000/details/${_id}`,{
-        method:'PUT',
-        headers:{
-            'content-type':'application/json'
-        },
-        body:JSON.stringify(newTorist)
-    })
-    .then(res=>res.json)
-    .then(data=>console.log(data))
+    // fetch(`http://localhost:5000/details/${_id}`,{
+    //     method:'PUT',
+    //     headers:{
+    //         'content-type':'application/json'
+    //     },
+    //     body:JSON.stringify(newTorist)
+    // })
+    // .then(res=>res.json())
+    // .then(data=>console.log(data))
+    Swal.fire({
+        title: "Do you want to save the changes?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Save",
+        denyButtonText: "Don't save",
+        cancelButtonText: "Cancel"
+      }).then((result) => {
+        if (result.isDismissed) {
+          
+          return;
+        }
+      
+        if (result.isConfirmed) {
+          const loadingIndicator = Swal.showLoading(); 
+      
+          fetch(`http://localhost:5000/details/${_id}`, {
+            method: 'PUT',
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(newTorist)
+          })
+          .then(res => res.json())
+          .then(data => {
+            Swal.close(loadingIndicator); 
+            console.log(data);
+            if (data.modifiedCount>0) { 
+              Swal.fire("Saved!", "", "success");
+            } else {
+              Swal.fire("Error saving changes", data.error, "error");
+            }
+          })
+          .catch(error => {
+            Swal.close(loadingIndicator);
+            Swal.fire("Error", "Failed to save changes", "error");
+            console.error(error);
+          });
+        } else if (result.isDenied) {
+          Swal.fire("Changes are not saved", "", "info");
+        }
+      });
 }
-    console.log(loaderData)
+
     return (
         <div>
         <div className="bg-[#F4F3F0] p-24">

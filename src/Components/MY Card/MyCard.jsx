@@ -18,7 +18,7 @@ const MyCard = ({list}) => {
 		.catch(error=>console.log(error))
     }
     return (
-        <tbody>
+        <>
 				<tr className="border-b border-opacity-20 border-gray-700 bg-gray-900">
 					<td className="p-3">
 						<p>{_id}</p>
@@ -61,7 +61,7 @@ const MyCard = ({list}) => {
 				
 				
 				
-			</tbody>
+			</>
     );
 };
 
