@@ -1,8 +1,17 @@
-# React + Vite
+# Journey OfTrack
+# web site link : https://torist-side.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Our projact Fruture
 
-Currently, two official plugins are available:
+- This website is Travial 
+- use tousit sports
+- filtering rate
+- use easyly 
+- we give fulltime service
+## we use Npm pacakg
+- react-simple-typewriter
+,
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- react-awesome-reveal,
+
+
