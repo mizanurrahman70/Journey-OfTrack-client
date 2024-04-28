@@ -21,6 +21,7 @@ import AllTorist from './Components/All Tosrist List/AllTorist.jsx';
 import AverageData from './Components/Average Data/AverageData.jsx';
 import MyList from './Components/My List/MyList.jsx';
 import UpdateLIst from './Components/Update Torist  List/UpdateLIst.jsx';
+import PrivetRoute from './Privet Route/PrivetRoute.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addtorist',
-        element:<AddTorist></AddTorist>
+        element:<PrivetRoute><AddTorist></AddTorist></PrivetRoute>
       },
       {
         path:'/reg',
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
-        element:<CardDtls></CardDtls>
+        element:<PrivetRoute><CardDtls></CardDtls></PrivetRoute>
       },
       {
         path:'/allsports',
@@ -61,12 +62,12 @@ const router = createBrowserRouter([
       {
         path:'/toristlist',
     
-        element:<MyList></MyList>
+        element:<PrivetRoute><MyList></MyList></PrivetRoute>
       },
       {
         path:'/update/:id',
         loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
-        element:<UpdateLIst></UpdateLIst>
+        element:<PrivetRoute><UpdateLIst></UpdateLIst></PrivetRoute>
       },
     ])
   },

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Login/Auth Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddTorist = () => {
     const { user } = useContext(AuthContext);
@@ -35,6 +36,7 @@ const AddTorist = () => {
         })
         .then(res=>res.json())
         .then(data=>{
+            Swal.fire("Upload Successful");
             console.log(data)
             form.reset( )
         })

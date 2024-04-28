@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const MyCard = ({list}) => {
+const MyCard = ({list,deltHandle}) => {
+
 	const [user,setUser]=useState(list)
     const {toristSportName,countryName,average_cost,_id,name }=user
-    const deltHandle=_id=>{
-        console.log(_id)
-        fetch(`http://localhost:5000/details/${_id}`,{
-            method:"DELETE"
-        })
-        .then(res=>res.json())
-        .then(data=>{
-			if(data.acknowledged){
-             setUser(data)
-			}
-		})
-		.catch(error=>console.log(error))
-    }
+   
     return (
         <>
 				<tr className="border-b border-opacity-20 border-gray-700 bg-gray-900">

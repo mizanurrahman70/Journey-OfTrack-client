@@ -50,7 +50,7 @@ const Login = () => {
         .catch((error)=>console.log(error))
         
     }
-    console.log(user)
+    
     return (
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto">
         <h1 className="text-2xl font-bold text-center">Login</h1>
