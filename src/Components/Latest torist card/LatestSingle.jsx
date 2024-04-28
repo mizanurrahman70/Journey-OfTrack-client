@@ -9,11 +9,12 @@ const LatestSingle = ({tourist}) => {
     location,
     short_description,
     average_cost,
-    seasonality}=tourist
+    seasonality,
+    imgURL}=tourist
     return (
         <div data-aos="flip-up" className="max-[350px] md:w-[350px] bg-slate-100/70 px-6 py-4 mx-auto rounded-2xl space-y-6 shadow-md">
           
-        <img className="w-[350px] h-[190px] bg-gray-400 rounded-2xl" src={''} alt="card navigate ui" />
+        <img className="w-[350px] h-[190px] bg-gray-400 rounded-2xl" src={imgURL} alt="card navigate ui" />
      
         <div className="space-y-2">
         <h2 className="text-slate-800 font-medium ">Torist Country: <span className='text-orange-300 text-xl'>{country_Name}</span></h2>
@@ -34,7 +35,7 @@ const LatestSingle = ({tourist}) => {
             <div>
             <h2 className="md:text-xl text-gray-800">{''}</h2>
             </div>
-            <button className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900"><Link to={''}>view Details</Link></button>
+            <button className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900"><Link to={`/latestTourist/${country_Name}`}>view Details</Link></button>
         </div>
     </div>
     );

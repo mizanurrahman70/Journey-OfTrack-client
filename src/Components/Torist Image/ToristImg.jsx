@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Fade } from "react-awesome-reveal";
 const ToristImg = () => {
     return (
     <><div>
-        <h1 className='text-center'>Tourist Place</h1>
+       <Fade> <h1 className='text-center font-semibold text-2xl'>Tourist Place</h1></Fade>
         <p className='text-center'>Get inspired for your next trip to Europe. Plan your vacation to discover European culture, <br /> heritage, architecture, gastronomy and stunning landscapes.</p>
     </div>
         <section className="py-6 bg-gray-800 dark:bg-gray-100 text-gray-50 dark:text-gray-900">

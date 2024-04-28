@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import LatestSingle from '../Latest torist card/LatestSingle';
+import CounterCard from '../Countru Card/CounterCard';
 
 const Latest_torist = () => {
     const [toristSport,setToristSport]=useState([])
     useState(()=>{
-        fetch('http://localhost:5000/toristSport')
+        fetch('https://toreist-server-side.vercel.app/toristSports')
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
             setToristSport(data)
         })
     })
-    console.log(toristSport)
+
     return (
        <>
        
@@ -21,7 +22,7 @@ const Latest_torist = () => {
        
        <div className='grid lg:grid-cols-3'>
         {
-            toristSport.map((tsport)=> <LatestSingle key={tsport.id} tourist={tsport}></LatestSingle>)
+            toristSport.map((tsport)=> <CounterCard key={tsport.id} tourist={tsport}></CounterCard>)
         }
        </div>
        

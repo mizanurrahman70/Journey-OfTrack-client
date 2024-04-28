@@ -9,7 +9,7 @@ const MyList = () => {
     const userEmail=user.email
     const [users,setUser]=useState([])
     useEffect(()=>{
-      fetch(`http://localhost:5000/mylist/${userEmail}`)
+      fetch(`https://toreist-server-side.vercel.app/mylist/${userEmail}`)
       .then(res=>res.json())
       .then(data=>{
         console.log(data)
@@ -43,7 +43,7 @@ const MyList = () => {
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
   if (result.isConfirmed) {
-    fetch(`http://localhost:5000/details/${_id}`, {
+    fetch(`https://toreist-server-side.vercel.app/details/${_id}`, {
       method: "DELETE"
     })
     .then(res => {

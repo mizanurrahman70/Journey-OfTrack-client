@@ -1,11 +1,13 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import ToristCards from '../Torist Cards/ToristCards';
+import CounterCard from '../Countru Card/CounterCard';
+import LatestSingle from '../Latest torist card/LatestSingle';
 
 const ToristCard = () => {
     const[user,setUser]=useState([])
     useEffect(()=>{
-       fetch('http://localhost:5000/torists_sides')
+       fetch('https://toreist-server-side.vercel.app/torists_sides')
        .then(res=>res.json())
        .then(data=>{
         setUser(data)

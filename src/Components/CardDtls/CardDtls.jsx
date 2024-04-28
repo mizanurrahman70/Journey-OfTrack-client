@@ -17,7 +17,7 @@ const CardDtls = () => {
         
          {/* Card Image */}
          
-           <div>
+           <div className='container flex flex-col mx-auto'>
            <img className="w-[350px] h-[190px] bg-gray-400 rounded-2xl" src={imgURL} alt="card navigate ui" />
            </div>
              {/* Card Heading */}

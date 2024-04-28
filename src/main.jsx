@@ -22,6 +22,7 @@ import AverageData from './Components/Average Data/AverageData.jsx';
 import MyList from './Components/My List/MyList.jsx';
 import UpdateLIst from './Components/Update Torist  List/UpdateLIst.jsx';
 import PrivetRoute from './Privet Route/PrivetRoute.jsx';
+import LatestTourist from './Components/Latest Tourist card/LatestTourist.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,17 +47,17 @@ const router = createBrowserRouter([
       },
       {
         path:'/details/:id',
-        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
+        loader:({params})=>fetch(`https://toreist-server-side.vercel.app/details/${params.id}`),
         element:<PrivetRoute><CardDtls></CardDtls></PrivetRoute>
       },
       {
         path:'/allsports',
-       loader:()=>fetch('http://localhost:5000/torists_sides'),
+       loader:()=>fetch('https://toreist-server-side.vercel.app/torists_sides'),
         element:<AllTorist></AllTorist>
       },
       {
         path:'/average',
-       loader:()=>fetch('http://localhost:5000/torists_sides'),
+       loader:()=>fetch('https://toreist-server-side.vercel.app/torists_sides'),
         element:<AverageData></AverageData>
       },
       {
@@ -66,8 +67,13 @@ const router = createBrowserRouter([
       },
       {
         path:'/update/:id',
-        loader:({params})=>fetch(`http://localhost:5000/details/${params.id}`),
+        loader:({params})=>fetch(`https://toreist-server-side.vercel.app/details/${params.id}`),
         element:<PrivetRoute><UpdateLIst></UpdateLIst></PrivetRoute>
+      },
+      {
+        path:'/latestTourist/:countryName',
+        loader:({params})=>fetch(`https://toreist-server-side.vercel.app/toristSport/${params.countryName}`),
+        element:<LatestTourist></LatestTourist>
       },
     ])
   },
