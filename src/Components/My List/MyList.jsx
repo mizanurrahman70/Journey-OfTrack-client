@@ -106,7 +106,7 @@ const MyList = () => {
 					<th className="p-3">Torist Name</th>
 					<th className="p-3 text-right">Amount</th>
 					<th className="p-3">Status</th>
-                    <th className='p-3'>Update</th>
+                    <th className='p-3 '>Update</th>
                     <th className='p-3'>Details</th>
                     <th className='p-3'>Delete</th>
                   

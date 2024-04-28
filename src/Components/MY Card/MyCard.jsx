@@ -42,8 +42,8 @@ const MyCard = ({list,deltHandle}) => {
 						<NavLink to={`/details/${_id}`}>	<span>Details</span></NavLink>
 						</span>
 					</td>
-					<td className=" text-right">
-						<span className="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
+					<td className=" text-right mr-5">
+						<span className=" px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
 							<span onClick={()=>deltHandle(_id)}>Delete</span>
 						</span>
 					</td>
