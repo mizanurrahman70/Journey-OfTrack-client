@@ -1,15 +1,13 @@
 import React from 'react';
 import { Fade } from "react-awesome-reveal";
-import { Typewriter, useTypewriter } from 'react-simple-typewriter'
+
 const ToristImg = () => {
-	const [text]=useTypewriter({
-		words: ['See','Our','Tourist Photo']
-	})
+	
     return (
     <><div>
-       <Fade> <h1 className='text-center font-semibold text-2xl'>Tourist Place</h1></Fade>
-        <p className='text-center'>Get inspired for your next trip to Europe. Plan your vacation to discover European culture, <br /> heritage, architecture, gastronomy and stunning landscapes.</p>
-		<h1 className='text-center'>{text}</h1>
+       <Fade> <h1 className='text-center font-extrabold text-xl md:text-3xl text-gray-600'>Tourist Place</h1></Fade>
+        <p className='text-center font-medium mt-3 text-gray-500'>Get inspired for your next trip to Europe. Plan your vacation to discover European culture, <br /> heritage, architecture, gastronomy and stunning landscapes.</p>
+		
     </div>
         <section className="py-6 bg-gray-800 dark:bg-gray-100 text-gray-50 dark:text-gray-900">
 	<div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">

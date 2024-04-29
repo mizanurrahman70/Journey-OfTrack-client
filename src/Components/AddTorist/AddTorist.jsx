@@ -48,8 +48,8 @@ const AddTorist = () => {
     }
     return (
         <div>
-        <div className="bg-[#F4F3F0] p-24">
-       <h2 className="text-3xl font-extrabold">Add a Coffee</h2>
+        <div className="bg-[#dacba1] p-24 rounded-2xl">
+       <h2 className="text-3xl font-extrabold">Add  Toruist sport</h2>
        <form onSubmit={handleAddCoffee}>
            {/* form name and quantity row */}
            <div className="md:flex mb-8">

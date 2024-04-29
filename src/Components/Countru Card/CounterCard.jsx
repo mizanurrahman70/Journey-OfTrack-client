@@ -14,7 +14,7 @@ const CounterCard = ({tourist}) => {
         <h2 className="text-slate-800 font-medium "> Country Name : <span className='text-orange-300 text-xl'>{tourist?.country_Name}</span></h2>
             
             
-            <p>Descripion :<span className=''>{tourist?.short_description}</span></p>
+            <p className=''><span className='font-medium text-gray-600'>Descripion :</span><span className='text-gray-600'>{tourist?.short_description}</span></p>
            
             <div className="flex gap-1">
              

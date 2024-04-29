@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { AuthContext } from './Auth Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigation } from 'react-router-dom';
 
 const Login = () => {
+    const Navigate=useNavigation()
+    const location=useLocation()
     const {UserLogin ,user,gooogleSingUp,Gitsignin}=useContext(AuthContext)
     const signIn=(e)=>{
        
@@ -18,7 +20,9 @@ const Login = () => {
             toast.success("Login sucessful")
             // alert ("Accout create seceefull")
           
-           
+            setTimeout(() => {
+                Navigate(location.state?location.state:'/')
+              }, "1000");
            
         
         })
@@ -34,7 +38,10 @@ const Login = () => {
         .then((result)=>{
           
             toast.success("Login sucessful")
-           
+            
+            setTimeout(() => {
+                Navigate(location.state?location.state:'/')
+              }, "1000");
         })
         .catch((error)=>console.log(error))
     }
@@ -44,7 +51,9 @@ const Login = () => {
         .then((result)=>{
           
             toast.success("Login sucessful")
-            console.log(result)
+            setTimeout(() => {
+                Navigate(location.state?location.state:'/')
+              }, "1000");
         })
            
         .catch((error)=>console.log(error))

@@ -53,10 +53,10 @@ useEffect(()=>{
     
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"><Link to='/'>JourneyOffTrack</Link></a>
+          <a className="btn btn-ghost text-xl"><Link to='/'>Journey<span className='text-green-600 font-medium text-2xl'>Off</span> Track</Link></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 items-center">
+          <ul className="menu menu-horizontal px-1 items-center font-medium">
            <NavLink to='/'> <li><p>Home</p></li></NavLink>
            <NavLink to='/allsports'>  <li><p>All Tourists Spot</p></li></NavLink>
           <NavLink to='/addtorist'>  <li><p>Add Tourists Spot</p></li></NavLink>
@@ -88,11 +88,11 @@ useEffect(()=>{
             </div>
           </div>
           <div>
-            <button onClick={logOutHandle} className='md:ml-4 bg-orange-200 p-2 rounded-2xl'>Log Out</button>
+            <button onClick={logOutHandle} className='md:ml-4 bg-orange-200 p-2 rounded-2xl font-medium'>Log Out</button>
           </div>
         </div>
       ) : (
-        <button className='lg:ml-4 bg-green-400 p-2 rounded-2xl'><NavLink to='/login'>Login</NavLink></button>
+        <button className='lg:ml-4 bg-green-400 p-2 rounded-2xl font-medium'><NavLink to='/login'>Login</NavLink></button>
       )}
      
         
