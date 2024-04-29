@@ -27,7 +27,7 @@ const AddTorist = () => {
 
         const newTorist = {authEmail,toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL }
         console.log(newTorist)
-        fetch('http://localhost:5000/torists_sides',{
+        fetch('https://toreist-server-side.vercel.app/torists_sides',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -58,7 +58,7 @@ const AddTorist = () => {
                        <span className="label-text">Tourists Spot Name</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="toristSportName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
+                       <input type="text"required name="toristSportName" placeholder="Tourists Spot Name" className="input input-bordered w-full" />
                    </label>
                </div>
                <div className="form-control md:w-1/2 ml-4">
@@ -66,7 +66,7 @@ const AddTorist = () => {
                        <span className="label-text">Country Name</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="countryName" placeholder="Country Name" className="input input-bordered w-full" />
+                       <input type="text" required name="countryName" placeholder="Country Name" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>
@@ -77,7 +77,7 @@ const AddTorist = () => {
                        <span className="label-text">Average_cost</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="average_cost" placeholder="Supplier Name" className="input input-bordered w-full" />
+                       <input type="text" required name="average_cost" placeholder="Supplier Name" className="input input-bordered w-full" />
                    </label>
                </div>
                <div className="form-control md:w-1/2 ml-4">
@@ -85,7 +85,7 @@ const AddTorist = () => {
                        <span className="label-text">Seasonality</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="seasonality" placeholder="like summer, winter" className="input input-bordered w-full" />
+                       <input type="text" required name="seasonality" placeholder="like summer, winter" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>
@@ -96,7 +96,7 @@ const AddTorist = () => {
                        <span className="label-text">Travel Time</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="travel_time" placeholder="like- 7 days" className="input input-bordered w-full" />
+                       <input type="text" required name="travel_time" placeholder="like- 7 days" className="input input-bordered w-full" />
                    </label>
                </div>
                <div className="form-control md:w-1/2 ml-4">
@@ -104,7 +104,7 @@ const AddTorist = () => {
                        <span className="label-text">Tota Visitors PerYear</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="totaVisitorsPerYear" placeholder="Tota Visitors PerYear" className="input input-bordered w-full" />
+                       <input type="text" required name="totaVisitorsPerYear" placeholder="Tota Visitors PerYear" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>
@@ -115,7 +115,7 @@ const AddTorist = () => {
                        <span className="label-text">User Email</span>
                    </label>
                    <label className="input-group">
-                       <input type="email" name="email" placeholder="User Email" className="input input-bordered w-full" />
+                       <input required type="email" name="email" placeholder="User Email" className="input input-bordered w-full" />
                    </label>
                </div>
                </div>
@@ -126,7 +126,7 @@ const AddTorist = () => {
                        <span className="label-text">User Name</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="name" placeholder="User Name" className="input input-bordered w-full" />
+                       <input required type="text" name="name" placeholder="User Name" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>
@@ -137,7 +137,7 @@ const AddTorist = () => {
                        <span className="label-text"> use image URL</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="imgURL" placeholder="use image URL" className="input input-bordered w-full" />
+                       <input required type="text" name="imgURL" placeholder="use image URL" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>
@@ -148,7 +148,7 @@ const AddTorist = () => {
                        <span className="label-text"> short description</span>
                    </label>
                    <label className="input-group">
-                       <input type="text" name="shortDescripion" placeholder="short description" className="input input-bordered w-full" />
+                       <input required type="text" name="shortDescripion" placeholder="short description" className="input input-bordered w-full" />
                    </label>
                </div>
            </div>

@@ -12,12 +12,12 @@ const MyList = () => {
       fetch(`https://toreist-server-side.vercel.app/mylist/${userEmail}`)
       .then(res=>res.json())
       .then(data=>{
-        console.log(data)
+        
         setUser(data)
       })
       .catch(error=>console.log(error))
     },[])
-    console.log(users)
+  
 	const deltHandle=_id=>{
         console.log(_id)
         // fetch(`http://localhost:5000/details/${_id}`,{

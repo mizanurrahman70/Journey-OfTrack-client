@@ -15,7 +15,7 @@ const AllTorist = () => {
     <summary className="m-1 btn">Short BY</summary>
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <NavLink to='/average'><li><a>Averege Rate</a></li></NavLink>
-    <li><a>Item 2</a></li>
+    
   </ul>
    </details>
             </div>

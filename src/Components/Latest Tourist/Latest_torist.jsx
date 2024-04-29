@@ -8,7 +8,7 @@ const Latest_torist = () => {
         fetch('https://toreist-server-side.vercel.app/toristSports')
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            
             setToristSport(data)
         })
     })

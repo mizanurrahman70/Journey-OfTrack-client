@@ -10,19 +10,20 @@ const CardDtls = () => {
     console.log(loaderData)
     return (
         <>
-        <div>
+        <div >
         <div>
        <Banner></Banner>
         </div>
         
          {/* Card Image */}
-         
-           <div className='container flex flex-col mx-auto'>
+         <div className='container w-[350px]   flex-col  mx-auto'>
+           <div className=' flex flex-col mx-auto'>
            <img className="w-[350px] h-[190px] bg-gray-400 rounded-2xl" src={imgURL} alt="card navigate ui" />
            </div>
              {/* Card Heading */}
-             <div>
-             <div className="space-y-2">
+            
+             <div className=''>
+             <div className="space-y-2 w-[350px]">
              <h2 className="text-slate-800 font-medium ">Country Name : <span className='text-orange-300'>{countryName} </span></h2>
                  <h2 className="text-slate-800 font-medium md:text-xl sm:text-lg ">Torist Sport Name : <span>{toristSportName}</span></h2>
                  <h2 className="text-slate-800 ">Description : <span>{shortDescripion}</span></h2>
@@ -43,14 +44,16 @@ const CardDtls = () => {
                  
              </div>
              {/* Price and action button */}
-             <div className=" font-medium">
+             <div className=" font-medium w-[350px]">
                 
                 <Link to='/'> <button className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900">Back</button></Link>
                  <button className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold md:text-base sm:text-sm text-[12px] hover:bg-slate-900">Buy Now</button>
              </div>
              </div>
+             </div>
+             </div>
          
-         </div></>
+       </>
     );
 };
 
