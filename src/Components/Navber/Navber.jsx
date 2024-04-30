@@ -53,7 +53,7 @@ useEffect(()=>{
     
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl "><Link to='/'>Journey<span className='text-green-600 font-medium text-2xl'>Off</span> Track</Link></a>
+          <a className="btn btn-ghost md:text-xl  "><Link to='/'>Journey<span className='text-green-600 font-medium text-2xl'>Off</span> Track</Link></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 items-center font-medium space-x-5">

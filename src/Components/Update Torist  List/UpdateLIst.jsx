@@ -49,7 +49,7 @@ const UpdateLIst = () => {
         if (result.isConfirmed) {
           const loadingIndicator = Swal.showLoading(); 
       
-          fetch(`http://localhost:5000/details/${_id}`, {
+          fetch(`https://toreist-server-side.vercel.app/details/${_id}`, {
             method: 'PUT',
             headers: {
               'content-type': 'application/json'
@@ -59,7 +59,7 @@ const UpdateLIst = () => {
           .then(res => res.json())
           .then(data => {
             Swal.close(loadingIndicator); 
-            console.log(data);
+           
             if (data.modifiedCount>0) { 
               Swal.fire("Saved!", "", "success");
             } else {
