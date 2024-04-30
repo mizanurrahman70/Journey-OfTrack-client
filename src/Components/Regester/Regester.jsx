@@ -6,7 +6,7 @@ import { AuthContext } from '../../Login/Auth Provider/AuthProvider';
 const Regester = () => {
     const {userSinup , setUserInfo}=useContext(AuthContext)
     
-  const navigate=useNavigate()
+  const Navigate=useNavigate()
     const regHandle=(e)=>{
         e.preventDefault()
         const form= e.target
@@ -40,8 +40,11 @@ const Regester = () => {
               .catch(error=>console.log(error))
                 toast.success("Accout create seceefull")
                 // alert ("Accout create seceefull")
-                     })
-               
+                setTimeout(() => {
+                  Navigate('/login')
+                }, "1000");  
+              })
+                    
             .catch((error)=>console.log(error))
     }
     return (

@@ -34,10 +34,10 @@ useEffect(()=>{
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <NavLink to='/' > <li><a>Home</a></li></NavLink>
-           <NavLink>  <li><a>All Tourists Spot</a></li></NavLink>
-          <NavLink to='/addtorist'>  <li><a>Add Tourists Spot</a></li></NavLink>
-          <NavLink to='/toristlist'><li><a>My List</a></li></NavLink>
+            <li>   <NavLink to='/'> Home</NavLink></li>
+           <li><NavLink to='/allsports'>  All Tourists Spot</NavLink></li>
+       <li>   <NavLink to='/addtorist'>  Add Tourists Spot</NavLink></li>
+         <li> <NavLink to='/toristlist'>My List</NavLink></li>
           <label className="swap swap-rotate">
   
   {/* this hidden checkbox controls the state */}
@@ -53,20 +53,22 @@ useEffect(()=>{
     
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl"><Link to='/'>Journey<span className='text-green-600 font-medium text-2xl'>Off</span> Track</Link></a>
+          <a className="btn btn-ghost text-xl "><Link to='/'>Journey<span className='text-green-600 font-medium text-2xl'>Off</span> Track</Link></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 items-center font-medium">
-           <NavLink to='/'> <li><p>Home</p></li></NavLink>
-           <NavLink to='/allsports'>  <li><p>All Tourists Spot</p></li></NavLink>
-          <NavLink to='/addtorist'>  <li><p>Add Tourists Spot</p></li></NavLink>
-          <NavLink to='/toristlist'><li><p>My List</p></li></NavLink>
+          <ul className="menu menu-horizontal px-1 items-center font-medium space-x-5">
+        
+
+        <li>   <NavLink to='/'> Home</NavLink></li>
+           <li><NavLink to='/allsports'>  All Tourists Spot</NavLink></li>
+       <li>   <NavLink to='/addtorist'>  Add Tourists Spot</NavLink></li>
+         <li> <NavLink to='/toristlist'>My List</NavLink></li>
           
    
       
            
           </ul>
-          <label className="swap swap-rotate">
+          <label className="swap swap-rotate mr-2">
   
   {/* this hidden checkbox controls the state */}
   <input onChange={themeHandle} type="checkbox" className="theme-controller"  />
@@ -81,18 +83,18 @@ useEffect(()=>{
         </div>
      
      {user ? (
-        <div className="flex  items-center ml-36">
+        <div className="flex  items-center ml-14 md:ml-30">
           <div role="button" className="btn btn-ghost btn-circle">
             <div className="w-10 rounded-full flex tooltip" data-tip={user?.displayName || 'Unknown'}>
             <img className='rounded-full' alt="User" src={user?.photoURL || 'https://i.ibb.co/y50H2s0/error.png'} />
             </div>
           </div>
           <div>
-            <button onClick={logOutHandle} className='md:ml-4 bg-orange-200 p-2 rounded-2xl font-medium'>Log Out</button>
+            <button onClick={logOutHandle} className='md:ml-4 bg-orange-200 p-2 rounded-2xl md:font-medium'>Log Out</button>
           </div>
         </div>
       ) : (
-        <button className='lg:ml-4 bg-green-400 p-2 rounded-2xl font-medium'><NavLink to='/login'>Login</NavLink></button>
+        <button className='lg:ml-4 bg-green-400 p-2 rounded-2xl md:font-medium ml-14 md:ml-30'><NavLink to='/login'>Login</NavLink></button>
       )}
      
         
