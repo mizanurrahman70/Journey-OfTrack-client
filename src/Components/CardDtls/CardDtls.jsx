@@ -1,13 +1,18 @@
-import React from 'react';
+
 import Banner from '../Banner/Banner';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 
+
 const CardDtls = () => {
     const loaderData=useLoaderData()
+
+    if(!loaderData){
+        return <span className="loading loading-bars loading-lg mt-20 mb-5 lg:ml-[700px]"></span>
+    }
     const {_id,toristSportName,countryName,average_cost,seasonality,travel_time,totaVisitorsPerYear,email,name,shortDescripion,imgURL}=loaderData
     // const id =useParams()
     // const data =loaderData.find((fn)=>fn_id==id)
-    console.log(loaderData)
+
     return (
         <>
         <div >

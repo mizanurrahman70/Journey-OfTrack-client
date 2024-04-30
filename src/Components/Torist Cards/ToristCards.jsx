@@ -23,7 +23,7 @@ const ToristCards = ({users}) => {
             {/* Price and action button */}
             <div className='flex justify-around'>
                 <h2 className="md:text-xl text-gray-800">Travel Time : <span>{travel_time}</span></h2>
-                <h2 className="md:text-xl text-gray-800">Average Cost : <span>{average_cost}</span></h2>
+                <h2 className="md:text-xl text-gray-800">Average Cost : <span>{average_cost}</span><span>$$</span></h2>
                 </div>
             <div className="mt-5 flex justify-between items-center font-medium">
                 <div>

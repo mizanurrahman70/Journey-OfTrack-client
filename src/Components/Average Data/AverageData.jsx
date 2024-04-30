@@ -4,7 +4,7 @@ import { NavLink, useLoaderData } from 'react-router-dom';
 
 const AverageData = () => {
     const loaderData=useLoaderData()
-    console.log(loaderData)
+  
     const shortData=loaderData.sort((a,b)=>b.average_cost-a.average_cost)
     return (
         <div>
@@ -14,6 +14,7 @@ const AverageData = () => {
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
     <NavLink to='/average'><li><a>Averege Rate</a></li></NavLink>
     <NavLink to='/allsports'><li><a>All Sports</a></li></NavLink>
+       <li><a>Ascending</a></li>
   </ul>
    </details>
             </div>

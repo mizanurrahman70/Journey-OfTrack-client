@@ -5,6 +5,9 @@ import Swal from 'sweetalert2';
 const MyCard = ({list,deltHandle}) => {
 
 	const [user,setUser]=useState(list)
+	if(!user){
+        return <span className="loading loading-bars loading-lg mt-20 mb-5 lg:ml-[700px]"></span>
+    }
     const {toristSportName,countryName,average_cost,_id,name }=user
    
     return (

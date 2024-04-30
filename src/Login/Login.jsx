@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { AuthContext } from './Auth Provider/AuthProvider';
-import { Link, useLocation, useNavigation } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useNavigation } from 'react-router-dom';
 
 const Login = () => {
-    const Navigate=useNavigation()
+    const Navigate=useNavigate()
     const location=useLocation()
     const {UserLogin ,user,gooogleSingUp,Gitsignin}=useContext(AuthContext)
     const signIn=(e)=>{

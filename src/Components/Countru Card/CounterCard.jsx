@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CounterCard = ({tourist}) => {
-    
+   
        
     return (
         <Link to={`/latestTourist/${tourist?.country_Name}`}>

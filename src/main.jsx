@@ -55,11 +55,7 @@ const router = createBrowserRouter([
        loader:()=>fetch('https://toreist-server-side.vercel.app/torists_sides'),
         element:<AllTorist></AllTorist>
       },
-      {
-        path:'/average',
-       loader:()=>fetch('https://toreist-server-side.vercel.app/torists_sides'),
-        element:<AverageData></AverageData>
-      },
+     
       {
         path:'/toristlist',
     

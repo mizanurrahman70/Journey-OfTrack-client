@@ -12,7 +12,9 @@ const Latest_torist = () => {
             setToristSport(data)
         })
     })
-
+    if(!toristSport){
+        return <span className="loading loading-bars loading-lg mt-20 mb-5 lg:ml-[700px]"></span>
+    }
     return (
        <>
        

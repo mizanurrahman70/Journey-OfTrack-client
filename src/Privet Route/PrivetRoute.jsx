@@ -5,7 +5,7 @@ import { AuthContext } from '../Login/Auth Provider/AuthProvider';
 
 const PrivetRoute = ({children}) => {
     let location = useLocation()
-   console.log(location)
+  
    
     const {user,loading}=useContext(AuthContext)
     if(loading){

@@ -94,7 +94,7 @@ useEffect(()=>{
           </div>
         </div>
       ) : (
-        <button className='lg:ml-4 bg-green-400 p-2 rounded-2xl md:font-medium ml-14 md:ml-30'><NavLink to='/login'>Login</NavLink></button>
+        <button className='lg:ml-20 bg-green-400 p-2 rounded-2xl md:font-medium ml-14 md:ml-36'><NavLink to='/login'>Login</NavLink></button>
       )}
      
         

@@ -81,7 +81,8 @@ useEffect(()=>{
         setUser,
         logOut,
         setUserInfo,
-        loading
+        loading,
+        setLoading
     }
     return (
         <AuthContext.Provider value={userInfo}>
