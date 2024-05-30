@@ -12,6 +12,5 @@
 - react-simple-typewriter
 ,
 
-- react-awesome-reveal,
 
 

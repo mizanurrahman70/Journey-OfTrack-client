@@ -37,7 +37,7 @@ const Login = () => {
         gooogleSingUp()
         .then((result)=>{
           
-            toast.success("Login sucessful")
+            toast.success("Login sucessful");
             
             setTimeout(() => {
                 Navigate(location.state?location.state:'/')
